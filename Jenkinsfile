@@ -3,7 +3,7 @@ node
    stage ('build') {
    
 	 
-        ansiblePlaybook  playbook: 'playbook.yml'        			
+        ansiblePlaybook  playbook: 'playbook.yml', inventory: 'inventory'        			
    }
     
 }
