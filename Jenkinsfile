@@ -4,7 +4,7 @@ node
    
 	 
         ansiblePlaybook  playbook: 'playbook.yml',
-		         inventory: 'inventory',
+		         inventory: 'inventory'
 		        
 		         
    }
