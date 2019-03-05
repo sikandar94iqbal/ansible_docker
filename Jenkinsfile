@@ -9,8 +9,8 @@ node
 		    
                          ansiblePlaybook  playbook: 'playbook.yml',
 		         inventory: 'inventory',
-		         vaultCredentialsId: '${AnsibleVaultPassword}', 
-                         extras : "--ask-vault-pass ${AnsibleVaultPassword}"
+		         vaultCredentialsId: '${Secret}', 
+                         extras : "--ask-vault-pass ${Secret}"
 		   
 	   }
 		        
