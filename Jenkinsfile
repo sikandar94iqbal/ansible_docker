@@ -9,7 +9,7 @@ node
 		    
                          ansiblePlaybook  playbook: 'playbook.yml',
 		         inventory: 'inventory',
-		         credentialsId: "$Secret"
+		         credentialsId: "${Secret}"
 		   
 	   }
 		        
