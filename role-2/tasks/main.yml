@@ -1,0 +1,7 @@
+---
+# tasks file for role-2
+# - name: print name
+
+  - name: Print message
+    debug:
+      msg: Hello world!
