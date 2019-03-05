@@ -6,7 +6,7 @@ node
         ansiblePlaybook  playbook: 'playbook.yml',
 		         inventory: 'inventory',
 		         sudoUser: 'sikander',
-		         extras: 'ansible_sudo_pass=rockstar007'
+		         extraVars: 'ansible_sudo_pass=rockstar007'
    }
     
 }
