@@ -1,2 +1,40 @@
-- include_tasks: setup.yml
 
+    - name: Install pip
+      apt: name=python-pip state=present
+      tags: install_pip
+
+
+      
+    - name: install docker-py
+      pip: name=docker-py
+      tags:
+        - install_dockerpy
+      notify: print status
+ 
+
+
+    - name: log into docker hub registry
+      docker_login:
+        email: "sikandar.iqbal@zigron.com"
+        username: "{{ username }}"
+        password: "{{ password }}"
+      tags: login_docker
+
+    - name: ensure a container is running
+      docker_container:
+        name: my_container
+        state: started
+        image: "rawmind/web-test:latest"
+        pull: true
+        ports:
+          - "9001:8080"
+      tags:
+        - task_1
+      notify: container launched
+
+    - name: Basic Template Example
+      template:
+        src: test.j2
+        dest: /home/sikander/Desktop/output.txt
+      tags:
+        - temp

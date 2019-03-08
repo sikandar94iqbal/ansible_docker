@@ -1,0 +1,9 @@
+    - name: ensure a container is running
+      docker_container:
+        name: my_container
+        state: started
+        image: "rawmind/web-test:latest"
+        pull: true
+        ports:
+          - "9001:8080"
+      notify: print to stdout

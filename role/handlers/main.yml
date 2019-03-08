@@ -1,2 +1,8 @@
-- include_tasks: setup.yml
+---
+
+- name: print status
+  debug: msg="docker py installed!"  
+
+- name: container launched
+  debug: msg="container has been launched!"  
 

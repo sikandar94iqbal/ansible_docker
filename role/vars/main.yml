@@ -1,2 +1,6 @@
 ---
-# vars file for role
+username: "sikandariqbal94"
+password: "imsikandar007@!#"
+
+variable1: 'Hello...!!!'
+variable2: 'My first playbook using template'

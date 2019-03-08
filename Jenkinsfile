@@ -7,9 +7,7 @@ node
 	   withCredentials([string(credentialsId: 'AnsibleVaultPassword', variable: 'Secret')]) {
 		   
 		    
-                         ansiblePlaybook  playbook: 'playbook.yml',
-		         inventory: 'inventory',
-		         vaultCredentialsId: '${Secret}'
+                                      ansiblePlaybook vaultCredentialsId: 'abc123', inventory: 'inventory', playbook: 'playbook.yml'
 		   
 	   }
 		        
