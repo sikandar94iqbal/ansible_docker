@@ -7,7 +7,7 @@ node
 	
 		   
 		    
-            ansiblePlaybook inventory: 'inventory', playbook: 'playbook.yml', tags: 'temp'
+            ansiblePlaybook inventory: 'inventory', playbook: 'playbook.yml', extras: '--tags "temp"'
 		   
 	       
 		         
