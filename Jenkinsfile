@@ -2,15 +2,13 @@ node
 {
    stage ('build') {
    
+         ansiblePlaybook inventory: 'inventory',
+         playbook: 'playbook.yml'
+         //, extras: '--tags "task_1"'
+         //changed
 	
-	   
-	
-		   
-		    
-            ansiblePlaybook inventory: 'inventory', playbook: 'playbook.yml'
-		   
-	       
-		         
    }
     
 }
+
+
