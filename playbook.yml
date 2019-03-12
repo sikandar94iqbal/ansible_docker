@@ -1,10 +1,19 @@
 ---
 - hosts: servers
-  tasks:
-    - include_role:
-         name: role
-      tags:
-        - role_1
+  roles:
+    - role
+    - role1
+    
+  # tasks:
+  #   - include_role:
+  #        name: role
+  #     tags:
+  #       - role_1
+
+  #   - include_role:
+  #        name: role1
+  #     tags:
+  #       - role_2
 
 
 

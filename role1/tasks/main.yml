@@ -1,0 +1,8 @@
+- name: get container status
+  shell: docker ps -a -f name=my_container --format {%raw%}"table {{.Status}}"{%endraw%} | awk 'FNR == 2 {print}' | awk '{print $1}'
+  register: status
+  tags: get
+  
+
+- debug: msg="{{ status.stdout }}"
+  tags: check
