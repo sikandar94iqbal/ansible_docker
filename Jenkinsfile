@@ -7,7 +7,7 @@ node
 	
 		   
 		    
-            ansiblePlaybook inventory: 'inventory', playbook: 'playbook.yml' ,tags: "task_1"
+            ansiblePlaybook inventory: 'inventory', playbook: 'playbook.yml' ,tags: "role,task_1"
 	   //, extras: '--tags "task_1"'
 		   
 	       
